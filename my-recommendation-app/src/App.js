@@ -1,22 +1,16 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Header from './components/Header';
-import UserProfile from './components/UserProfile';
-import ContentList from './components/ContentList';
-import FeedbackForm from './components/FeedbackForm';
-import Footer from './components/Footer';
+import { UserProvider } from './contexts/UserContext';
+import { Provider } from 'react-redux';
+import store from './redux/store';
+import AppRouter from './components/AppRouter';
 
 function App() {
   return (
-    <Router>
-      <Header />
-      <Routes>
-        <Route path="/profile" element={<UserProfile />} />
-        <Route path="/feedback" element={<FeedbackForm />} />
-        <Route path="/" element={<ContentList />} />
-      </Routes>
-      <Footer />
-    </Router>
+    <Provider store={store}>
+      <UserProvider>
+        <AppRouter />
+      </UserProvider>
+    </Provider>
   );
 }
 
