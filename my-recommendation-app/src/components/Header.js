@@ -1,21 +1,67 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 import logo from '../transp.svg';
-import '../Header.css';
+
+
+const HeaderContainer = styled.header`
+  background: linear-gradient(135deg, #001434, #02456e, #001434);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.9rem 1.4rem;
+  box-shadow: 3px 2px 7px 0px rgba(153, 244, 255, 0.32);
+  position: relative;
+  z-index: 99;
+`;
+
+const LogoContainer = styled.div`
+  display: flex;
+  padding: 0px 20px;
+  align-items: center;
+`;
+
+const LogoImage = styled.img`
+  height: 60px;
+  padding: 0 10px 0 0;
+`;
+
+const Title = styled.h1`
+  color: #7bf1ff;
+  font-size: 36px;
+  font-family: Ubuntu;
+`;
+
+const Nav = styled.nav`
+  padding: 44px 0 0 0;
+
+  .nav-link {
+    color: #7bf1ff;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 1.4rem;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+`;
+
 
 const Header = () => {
     return (
-        <header style={{ display: 'flex', alignItems: 'center', padding: '20px 30px', justifyContent: 'space-between' }}>
-            <div style={{ display: 'flex', alignItems: 'center' }}>
-                <img src={logo} alt="Logo" style={{ height: '60px' }}/>
-                <h1>databae</h1> 
-            </div>
-            <nav>
+        <HeaderContainer>
+            <LogoContainer>
+                <LogoImage src={logo} alt="Logo" />
+                <Title>databae</Title> 
+            </LogoContainer>
+            <Nav>
                 <Link to="/" className="nav-link">Home</Link>
                 <Link to="/profile" className="nav-link">Profile</Link>
                 <Link to="/feedback" className="nav-link">Feedback</Link>
-            </nav>
-        </header>
+            </Nav>
+        </HeaderContainer>
     );
 };
 
