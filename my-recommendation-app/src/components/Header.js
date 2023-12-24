@@ -5,12 +5,12 @@ import logo from '../transp.svg';
 
 
 const HeaderContainer = styled.header`
-  background: linear-gradient(135deg, #001434, #02456e, #001434);
+  background: linear-gradient(180deg, #0b0d65 15%, #0b0e37);
   color: white;
   display: flex;
   justify-content: space-between;
   padding: 0.9rem 1.4rem;
-  box-shadow: 3px 2px 7px 0px rgba(153, 244, 255, 0.32);
+//   box-shadow: 3px 2px 7px 0px rgba(153, 244, 255, 0.32);
   position: relative;
   z-index: 99;
 `;
@@ -27,20 +27,22 @@ const LogoImage = styled.img`
 `;
 
 const Title = styled.h1`
-  color: #7bf1ff;
+  color: rgba(123, 241, 255, 0.82);;
   font-size: 36px;
   font-family: Ubuntu;
 `;
 
 const Nav = styled.nav`
-  padding: 44px 0 0 0;
+  padding: 45px 0 0 0;
 
   .nav-link {
-    color: #7bf1ff;
-    font-size: 16px;
-    font-weight: 500;
+    color: #dddddd;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.99rem;
     margin: 0 1.4rem;
     text-decoration: none;
+    letter-spacing: 0.3px;
 
     &:hover {
       text-decoration: underline;
