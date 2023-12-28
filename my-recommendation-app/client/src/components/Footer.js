@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import logo from '../transp.svg';
 
 const FooterContainer = styled.footer`
-  background: linear-gradient(180deg, #121212, 65%, rgba(69, 11, 150, 0.88));
+  background: linear-gradient(180deg, #121212, 82%, rgba(50, 111, 192, 0.71));;
   color: white;
   display: flex;
   justify-content: space-between;
@@ -18,7 +18,7 @@ const FooterContent = styled.div`
 
 const FooterText = styled.p`
   color: #dddddd;
-  opacity: 0.7;
+  opacity: 0.85;
   font-family: 'Montserrat', sans-serif;
   margin: 0;
 `;
@@ -37,10 +37,10 @@ const FooterNav = styled.nav`
 
   .nav-link {
     color: #dddddd;
-    opacity: 0.5;
+    opacity: 0.9;
     font-family: 'Montserrat', sans-serif;
     font-size: 0.9rem;
-    font-weight: 600;
+    // font-weight: 600;
     margin: 0.1em 1.4em;
     text-decoration: none;
 
